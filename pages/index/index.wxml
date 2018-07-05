@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="weather container"> 
+  <text>{{weatherData}}</text> 
+</view>

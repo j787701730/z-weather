@@ -1,0 +1,6 @@
+/**app.wxss**/
+.container {
+  box-sizing: border-box;
+  padding: 0 11pt;
+  font-size: 11pt;
+} 
