@@ -1,4 +1,39 @@
 <!--index.wxml-->
-<view class="weather container"> 
-  <text>{{weatherData}}</text> 
+<view wx:if="{{currentWeather}}">
+  <view class="weather container">
+    <view class="current-w">
+      <view class="top">
+        <view class="top-r t-right">{{currentWeather.date}}</view>
+      </view>
+      <view class="currentCity t-center">{{currentWeather.currentCity}}</view>
+      <view class="t-center weatherDesc">
+        {{currentWeather.weatherDesc}}
+      </view>
+      <view class="t-center temperature">
+        {{currentWeather.temperature}}
+      </view>
+
+    </view>
+    <view class="original-w">
+      <view wx:for="{{originalData}}" wx:for-index="idx" wx:key="k" wx:for-item="od">
+        <view wx:if="{{idx > 0}}">
+          <view class="top list">
+            <view class="od-list">{{od.date}}</view>
+            <view class="od-list t-center">{{od.weather}}</view>
+            <view class="od-list t-right">{{od.temperature}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="now">
+      今天：现在{{currentWeather.weatherDesc}}，气温：{{currentWeather.temperature}}，{{currentWeather.wind}}，pm25：{{currentWeather.pm25}}。
+    </view>
+    <view wx:for="{{prompt}}" wx:for-index="idx" wx:key="k" wx:for-item="p">
+      <view class="top prompt-list">
+        <view>{{p.tipt}}：</view>
+        <view>{{p.des}}</view>
+      </view>
+    </view>
+
+  </view>
 </view>

@@ -1,2 +1,20 @@
 <!--pages/addr.wxml-->
-<text>pages/addr.wxml</text>
+<view class="container">
+  <input placeholder="首字母/汉字/拼音搜索" type="text" class="fetch-city" bindinput="fetchCity"/>
+</view>
+<scroll-view class="content" scroll-into-view="{{toView}}" scroll-y="true" scroll-with-animation="true">
+  <view class="weather container">
+    <view wx:for="{{citys}}" wx:for-index="idx" wx:key="k" wx:for-item="i">
+      <view class="citys-py" id="{{'inToView'+idx}}">{{i.py}}</view>
+      <view wx:for="{{i.data}}" wx:key="kk" wx:for-item="ii">
+        <view class='city-name' bindtap="selectCity" data-name="{{ii.name}}">{{ii.name}}</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<view class="orientation_region">
+  <block wx:for="{{citys}}" wx:for-index="idx" wx:key="k" wx:for-item="i">
+    <view class="orientation_city" bindtap="scrollToViewFn" data-id="{{idx}}">{{i.py}}</view>
+  </block>
+</view>

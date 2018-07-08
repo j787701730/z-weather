@@ -27,7 +27,7 @@
         "pagePath": "pages/favorite/favorite",
         "iconPath": "./images/star (2).png",
         "selectedIconPath": "./images/star.png",
-        "text": "收藏"
+        "text": "历史"
       }
     ]
   }

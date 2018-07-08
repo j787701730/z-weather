@@ -1,2 +1,6 @@
 <!--pages/favorite/favorite.wxml-->
-<text>pages/favorite/favorite.wxml</text>
+<view class="container">
+  <view wx:for="{{history}}" wx:for-index="idx" wx:key="k" wx:for-item="it">
+    <view class='city-name' bindtap="selectCity" data-lng="{{it.lng}}" data-lat="{{it.lat}}" data-name="{{it.name}}">{{it.name}}</view>
+  </view>
+</view>

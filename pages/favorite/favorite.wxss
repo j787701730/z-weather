@@ -1,1 +1,5 @@
 /* pages/favorite/favorite.wxss */
+
+.city-name {
+  line-height: 2
+}
