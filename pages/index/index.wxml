@@ -9,6 +9,11 @@
       <view class="t-center weatherDesc">
         {{currentWeather.weatherDesc}}
       </view>
+      <view class="t-center weatherDesc">
+      <image style="width: 32px; height: 24px;" src="{{originalData[0].dayPictureUrl}}"></image>
+      　
+      <image style="width: 32px; height: 24px;" src="{{originalData[0].nightPictureUrl}}"></image>
+      </view>
       <view class="t-center temperature">
         {{currentWeather.temperature}}
       </view>
