@@ -1,6 +1,6 @@
 <!--pages/addr.wxml-->
 <view class="container">
-  <input placeholder="首字母/汉字/拼音搜索" type="text" class="fetch-city" bindinput="fetchCity"/>
+  <input placeholder-class='fetch-city-pl' placeholder="首字母/汉字/拼音搜索" type="text" class="fetch-city" bindinput="fetchCity"/>
 </view>
 <scroll-view class="content" scroll-into-view="{{toView}}" scroll-y="true" scroll-with-animation="true">
   <view class="weather container">

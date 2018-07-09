@@ -118,6 +118,10 @@ page {
 
 .fetch-city {
   border: 1px solid #ccc;
-  margin-bottom: 15rpx;
-  padding-left: 15rpx;
+  margin-bottom: 20rpx;
+  padding:0 15rpx;
+}
+
+.fetch-city-pl{
+  font-size: 11pt;
 }
